@@ -2,17 +2,124 @@
 <html>
 <head>
   <title>Happy Birthday❤️</title>
-</head>
-<body style="text-align:center; font-family:Arial; background-color:#ffe6f0;">
 
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      max-width: 500px;
+      margin: 60px auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      color: #ff4d6d;
+    }
+
+    button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background: #e6004c;
+    }
+
+    #surpriseText {
+      display: none;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #ff4d6d;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      color: red;
+      font-size: 20px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatUp {
+      0% {transform: translateY(100vh); opacity: 0;}
+      50% {opacity: 1;}
+      100% {transform: translateY(-10vh); opacity: 0;}
+    }
+
+    /* Video */
+    video {
+      width: 100%;
+      border-radius: 15px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="card">
   <h1> Happy Birthday paaru </h1>
 
-  <p style="font-size:20px;">
-    You are very special to me <br>
-    Wishing you happiness, success, and all your dreams come true✨
+  <p>
+    You are very special to me❤️<br>
+    Wishing you happiness, success and all your dreams come true✨<br>
+    Have a wonderful day 
   </p>
 
-  <h2>Have a wonderful day! </h2>
+  <!-- Your edited video -->
+  <video controls>
+    <source src="archana-birthday.mp4" type="video/mp4">
+    Your browser does not support video playback.
+  </video>
+
+  <button onclick="showSurprise()">🎁 Click for Surprise</button>
+
+  <p id="surpriseText">
+    You are truly special💖 Never forget that!
+  </p>
+</div>
+
+<script>
+  // Surprise button
+  function showSurprise() {
+    document.getElementById("surpriseText").style.display = "block";
+    alert(" Surprise! You are amazing❤️");
+  }
+
+  // Floating hearts
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 10 + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 6000);
+  }
+
+  setInterval(createHeart, 300);
+</script>
 
 </body>
 </html>
