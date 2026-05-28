@@ -1,112 +1,18 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Happy Birthday</title>
-
-    <style>
-
-        body {
-            background-color: pink;
-            text-align: center;
-            font-family: Arial;
-            padding-top: 100px;
-        }
-
-        h1 {
-            color: white;
-            font-size: 50px;
-        }
-
-        p {
-            color: white;
-            font-size: 25px;
-        }
-.hearts {
-    font-size: 30px;
-    animation: float 3s infinite alternate;
-}
-
-@keyframes float {
-    from {
-        transform: translateY(0px);
-    }
-
-    to {
-        transform: translateY(20px);
-    }
-}
-button {
-    background-color: white;
-    color: hotpink;
-    border: none;
-    padding: 15px 25px;
-    font-size: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-#secretMessage {
-    margin-top: 20px;
-    font-size: 25px;
-    color: white;
-}
-#typing {
-    color: white;
-    font-size: 30px;
-    margin-top: 40px;
-}
-    </style>
-
+  <title>Happy Birthday❤️</title>
 </head>
+<body style="text-align:center; font-family:Arial; background-color:#ffe6f0;">
 
-<body>
-<div class="hearts">❤️ ❤️ ❤️ ❤️ ❤️</div>
+  <h1> Happy Birthday paaru </h1>
 
-    <h1>Happy Birthday paaru💌</h1>
+  <p style="font-size:20px;">
+    You are very special to me <br>
+    Wishing you happiness, success, and all your dreams come true✨
+  </p>
 
-    <p>
-You are not just my junior, you are like my own sister😚<br><br>
-Thank you for all the smiles, memories and happiness<br><br>
-I hope this birthday becomes one of the most special days of your life🌷
-</p>
-<br><br>
+  <h2>Have a wonderful day! </h2>
 
-<video height="500" controls>
-    <source src="archana birthday.mp4" type="video/mp4">
-</video>
-
-<br><br>
-
-<button onclick="showMessage()">
-    Click Here💖
-</button>
-
-<p id="secretMessage"></p>
-<h2 id="typing"></h2>
-
-</body><script>
-
-function showMessage() {
-    document.getElementById("secretMessage").innerHTML =
-    "You will always be special to me❤️";
-}
-const text = "You deserve all the happiness in the world🫶🏻";
-let index = 0;
-
-function typeEffect() {
-
-    if (index < text.length) {
-
-        document.getElementById("typing").innerHTML += text.charAt(index);
-
-        index++;
-
-        setTimeout(typeEffect, 100);
-    }
-}
-
-typeEffect()
-</script>
-
+</body>
 </html>
